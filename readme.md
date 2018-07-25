@@ -56,7 +56,7 @@ session.send( {type: 'message',
 
 Genesys GMS servers chat flow as follow:-
 
-![](Images/genesys.png)
+![](Images/genesys.PNG)
 
 Upon triggering the chatAPI to the Genesys GMS server, Genesys ORS(Orchestration Server) will handle all the incoming message and put it into a queue. URS will then route the request to available agents. The Agents accepting the handover will then trigger a welcome message or send a message which will be pass trough ORS to GMS and eventually show up to the user. If you wish to learn more on how Genesys backend work, refer the Reference section.
 
