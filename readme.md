@@ -173,7 +173,7 @@ To send a message to human agent, we need to supply the correct parameters. [Ref
 
 <a name="reference"></a>
 ## References ##
-Bot handoff by Hannah Krager - <span style=“color:green;”> Typescript</span> ```Typescript``` - https://github.com/palindromed/Bot-HandOff</br>
+Bot handoff by Hannah Krager - ```Typescript``` - https://github.com/palindromed/Bot-HandOff</br>
 Intermediator bot ```C#``` - https://github.com/tompaana/intermediator-bot-sample</br>
 Genesys ORS - https://docs.genesys.com/Documentation/OS</br>
 Genesys Chat API documentation - https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2 </br>Genesys Chat Sequence Diagram - https://docs.genesys.com/Documentation/GMS/8.5.2/Help/ChatImmediate#scrollNav-6
