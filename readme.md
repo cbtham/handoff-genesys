@@ -37,7 +37,7 @@ bot.dialog('/Support', require('./support'))
 ```
 Note: There are also other scenario where you may want to bind action after trigger – [refer here](https://docs.microsoft.com/en-us/azure/bot-service/nodejs/bot-builder-nodejs-dialog-actions?view=azure-bot-service-3.0)
 
-When the bot detects the magic word, it will invoke the router which role is to route message correctly to either bot or a call center, in our case Genesys. The router acts as a middleware to pass message between bot and agent presented to the user. If there is incoming message from Agent, tag the message as coming from agent. 
+When the bot detects the magic word, it will invoke the router which role is to route message correctly to either bot or a call center, in our case Genesys. The router acts as a middleware to pass message between bot and agent presented to the user. If there is incoming message from Agent, tag the message as coming from agent. We use agentConnected = true tell the bot an agent is connected. We can also use if agentConnected is null to tell otherwise.
 
 ```javascript
 session.userData.chatID = Body.chatId;
@@ -51,7 +51,7 @@ session.send( {type: 'message',
                user: 'Agent'}) 
 ```
 
-This is the same as user. If the message is send through the client, it will be tag as user. The routing will also include conversation metadata. Things like user address, agent address and the message transcript. Bot in the architecture contains all your bot code, logic, dialog flows etc. Once the handover is successfully initiated, we can pass everything to Genesys.
+ This is the same as user. If the message is send through the client, it will be tag as user. The routing will also include conversation metadata. Things like user address, agent address and the message transcript. Bot in the architecture contains all your bot code, logic, dialog flows etc. Once the handover is successfully initiated, we can pass everything to Genesys.
 
 
 Genesys GMS servers chat flow as follow:-
