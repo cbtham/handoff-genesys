@@ -65,7 +65,7 @@ Upon triggering the chatAPI to the Genesys GMS server, Genesys ORS(Orchestration
 
 Assumption:
 1.	You already have Genesys GMS servers setup and properly configured to expose chatAPI
-2.	Your Genesys GMS server url is http://myownGMSurl and your service name is customer-support
+2.	Your Genesys GMS server url is *http://myownGMSurl* and your service name is *customer-support*. You may also specify the port.
 
 Using the Genesys ChatAPI</br>
 https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2 
@@ -77,7 +77,7 @@ You need to specify your server name and service name as follow /genesys/2/chat/
 
 ```javascript
 gmsURL='http://myownGMSurl:8080/genesys/2/chat/customer-support/'
-        , param="nickname=test000"
+        , param="nickname=yourNICKNAME"
         , Option={
         "headers": { "content-type": "application/x-www-form-urlencoded" },
         "url": gmsURL,
@@ -163,7 +163,7 @@ request.post(Option_s,(error, response, body) => {
             }
         });
 ```
-To send a message to human agent, we need to supply the correct parameters. [Refer here](https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2#Send_Message) for optional & mandatory parameters. 
+To send a message to human agent, we need to supply the correct parameters. [Refer here](https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2#Send_Message) for optional and mandatory parameters. 
 
 ## Improvements ##
 - Further integration with Genesys API (User/Agent IsTyping)
@@ -173,11 +173,10 @@ To send a message to human agent, we need to supply the correct parameters. [Ref
 
 <a name="reference"></a>
 ## References ##
-Bot handoff by Hannah Krager - ```Typescript``` - https://github.com/palindromed/Bot-HandOff</br>
+Bot handoff by Hannah Krager - <span style=“color:green;”> Typescript</span> ```Typescript``` - https://github.com/palindromed/Bot-HandOff</br>
 Intermediator bot ```C#``` - https://github.com/tompaana/intermediator-bot-sample</br>
 Genesys ORS - https://docs.genesys.com/Documentation/OS</br>
-Genesys Chat API documentation - https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2
-
+Genesys Chat API documentation - https://docs.genesys.com/Documentation/GMS/latest/API/ChatAPIv2 </br>Genesys Chat Sequence Diagram - https://docs.genesys.com/Documentation/GMS/8.5.2/Help/ChatImmediate#scrollNav-6
 
 <a name="Summary"></a>
 ## Summary ##
@@ -185,3 +184,6 @@ Genesys Chat API documentation - https://docs.genesys.com/Documentation/GMS/late
 There is now more bots than ever! Thanks to all the developers out there creating smart bots for people to consume services by providing a new way of interaction. There is so much more that you can do. You may want to check out also [Dialogs](http://aihelpwebsite.com/Blog/EntryId/9/Introduction-To-Using-Dialogs-With-The-Microsoft-Bot-Framework), [FormFlow](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/07/14/building-a-microsoft-bot-using-microsoft-bot-framework-using-formflow/), and [Microsoft Language Understanding and Intelligence Services (LUIS)](https://docs.botframework.com/en-us/node/builder/guides/understanding-natural-language/). With these and other features, you can build sophisticated bots that respond to users' queries and commands and interact in a fluid, conversational, and non-linear manner. For more information, and for ideas to get you started, see [What is Microsoft Bot Framework Overview](https://blogs.msdn.microsoft.com/uk_faculty_connection/2016/04/05/what-is-microsoft-bot-framework-overview/).
 
 ----
+## Credits ##
+Special thanks to Shearn and Maven and it was a great pleasure coding with you guys.</br>
+Also [geektrainer](https://github.com/GeekTrainer) for his awesome bot documentations.
