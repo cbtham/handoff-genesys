@@ -58,7 +58,7 @@ Genesys GMS servers chat flow as follow:-
 
 ![](Images/genesys.PNG)
 
-Upon triggering the chatAPI to the Genesys GMS server, Genesys ORS(Orchestration Server) will handle all the incoming message and put it into a queue. URS will then route the request to available agents. The Agents accepting the handover will then trigger a welcome message or send a message which will be pass trough ORS to GMS and eventually show up to the user. If you wish to learn more on how Genesys backend work, refer the Reference section.
+Upon triggering the chatAPI to the Genesys GMS server, Genesys ORS(Orchestration Server) will handle all the incoming message and put it into a queue. URS will then route the request to available agents. The Agents accepting the handover will then trigger a welcome message or send a message which will be pass trough ORS to GMS and eventually show up to the user. If you wish to learn more on how Genesys backend work, refer the [Reference](#reference).
 
 <a name="approach"></a>
 ## The Approach ##
@@ -171,6 +171,7 @@ To send a message to human agent, we need to supply the correct parameters. [Ref
 - Logs for agent to see before talking to customer
 - Sentiment analysis of chat
 
+<a name="reference"></a>
 ## References ##
 Bot handoff by Hannah Krager - ```Typescript``` - https://github.com/palindromed/Bot-HandOff</br>
 Intermediator bot ```C#``` - https://github.com/tompaana/intermediator-bot-sample</br>
